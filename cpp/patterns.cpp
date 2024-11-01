@@ -28,12 +28,67 @@ int pattern2 (int n) {
     }
 }
 
-// int pattern3
-int pattern (int n) {
+// pattern3
+int pattern3 (int n) {
     for (int i=1; i<n; ++i) {
-        for (int j=1; j<=i; ++j) {
-            cout << j << ""
+        for(int j=1; j<=i; ++j) {
+            cout << j << " ";
         }
+        cout << endl;
     }
-    cout << endl;
-}   
+}
+
+// pattern 4
+int pattern4 (int n) {
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <=i; ++j) {
+            cout << i << " ";
+        }
+        cout << endl;
+    }
+}
+
+// 1
+// 2 2
+// 3 3 3
+// 4 4 4 4
+// 5 5 5 5 5
+
+// outer loop: 1 to n
+// inner loop: 1 to i
+// print i (print the current iteration value)
+
+// pattern 5
+int pattern5(int n) {
+    for (int i = 0; i<n; ++i) {
+        for (int j = n; j>i; --j) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+// *****
+// ****
+// ***
+// **
+// *
+
+
+// outer loop; 1 to n
+// inner loop: n to i
+// print "*"
+
+// pattern 6
+int pattern6(int n) {
+    for (int i = 1; i<n; ++i) {
+        for (int j = n; j > i; --j) {
+            cout << n-j+1 << " ";
+        }
+        cout << endl;
+    }
+}
+
+// no. of columns =  (N - row index) for each line here
+// (N - j) will give us the numbers in a row starting from 1 to N-i
+// j = n => tells us how many cols to print
