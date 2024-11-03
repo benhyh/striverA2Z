@@ -81,7 +81,7 @@ int pattern5(int n) {
 
 // pattern 6
 int pattern6(int n) {
-    for (int i = 1; i<n; ++i) {
+    for (int i = 0; i<n; ++i) {
         for (int j = n; j > i; --j) {
             cout << n-j+1 << " ";
         }
@@ -92,3 +92,37 @@ int pattern6(int n) {
 // no. of columns =  (N - row index) for each line here
 // (N - j) will give us the numbers in a row starting from 1 to N-i
 // j = n => tells us how many cols to print
+// n-j+1 => tells us the value to print. how? n-j returns the entire range of values and each time j decrements by 1, we get the next value in the range
+
+int pattern7(int n) {
+    for (int i = 0; i<n; ++i) {
+        // space
+        for (int j = 0; j<n-i+1; ++j) {
+            cout << " ";
+        }
+
+        // star
+        for (int j = j < 2*i+1; ++j) {
+            cout << "*";
+        }
+
+        // space
+        for (int j = 0; j<n-i+1; ++j) {
+            cout << " ";
+        }
+
+        cout << endl;
+    }
+}
+
+//      *
+//     ***
+//    *****
+//   *******
+//  *********
+
+// sample input: 3
+// first row contain two spaces (3-1)
+// second row contain once space (3-2)
+// third row contain no space (3-3)
+
