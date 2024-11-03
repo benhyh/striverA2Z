@@ -102,7 +102,7 @@ int pattern7(int n) {
         }
 
         // star
-        for (int j = j < 2*i+1; ++j) {
+        for (int j = 0; j < 2*i+1; ++j) {
             cout << "*";
         }
 
@@ -126,3 +126,26 @@ int pattern7(int n) {
 // second row contain once space (3-2)
 // third row contain no space (3-3)
 
+int pattern8 (int n) {
+    for (int i = 0; i < n; ++i) {
+        
+        // Print spaces (increasing with each row)
+        for (int j = 0; j < i; ++j) {
+            cout << " ";
+        }
+
+        // Print stars (decreasing with each row)
+        for (int j = 0; j < 2 * (n - i) - 1; ++j) {
+            cout << "*";
+        }
+
+        // Move to the next line after each row
+        cout << endl;
+    }
+}
+
+// *********
+//  *******
+//   *****
+//    ***
+//     *
