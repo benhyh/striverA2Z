@@ -8,9 +8,8 @@
 using namespace std;
 
 // pattern 1
-
-int pattern1(int n) {
-    for (int i = 0; i<n; ++i) {
+void pattern1(int n) {
+        for (int i = 0; i<n; ++i) {
         for (int j = 0; j<n; ++j) {
             cout << "*" << "\n";
         }
@@ -19,7 +18,7 @@ int pattern1(int n) {
 }
 
 // pattern 2
-int pattern2 (int n) {
+void pattern2 (int n) {
     for (int i= 0; i<n; ++i) {
         for (int j=0; j<=i; ++j) {
             cout << "* ";
@@ -29,7 +28,7 @@ int pattern2 (int n) {
 }
 
 // pattern3
-int pattern3 (int n) {
+void pattern3 (int n) {
     for (int i=1; i<n; ++i) {
         for(int j=1; j<=i; ++j) {
             cout << j << " ";
@@ -39,14 +38,13 @@ int pattern3 (int n) {
 }
 
 // pattern 4
-int pattern4 (int n) {
+void pattern4 (int n) {
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <=i; ++j) {
             cout << i << " ";
         }
         cout << endl;
     }
-}
 
 // 1
 // 2 2
@@ -58,15 +56,16 @@ int pattern4 (int n) {
 // inner loop: 1 to i
 // print i (print the current iteration value)
 
+}
+
 // pattern 5
-int pattern5(int n) {
+void pattern5(int n) {
     for (int i = 0; i<n; ++i) {
         for (int j = n; j>i; --j) {
             cout << "* ";
         }
         cout << endl;
     }
-}
 
 // *****
 // ****
@@ -79,22 +78,26 @@ int pattern5(int n) {
 // inner loop: n to i
 // print "*"
 
+}
+
 // pattern 6
-int pattern6(int n) {
+void pattern6(int n) {
     for (int i = 0; i<n; ++i) {
         for (int j = n; j > i; --j) {
             cout << n-j+1 << " ";
         }
         cout << endl;
     }
-}
 
 // no. of columns =  (N - row index) for each line here
 // (N - j) will give us the numbers in a row starting from 1 to N-i
 // j = n => tells us how many cols to print
 // n-j+1 => tells us the value to print. how? n-j returns the entire range of values and each time j decrements by 1, we get the next value in the range
 
-int pattern7(int n) {
+}
+
+// pattern 7
+void pattern7(int n) {
     for (int i = 0; i<n; ++i) {
         // space
         for (int j = 0; j<n-i+1; ++j) {
@@ -113,7 +116,6 @@ int pattern7(int n) {
 
         cout << endl;
     }
-}
 
 //      *
 //     ***
@@ -126,7 +128,10 @@ int pattern7(int n) {
 // second row contain once space (3-2)
 // third row contain no space (3-3)
 
-int pattern8 (int n) {
+}
+
+// pattern 8
+void pattern8 (int n) {
     for (int i = 0; i < n; ++i) {
         
         // Print spaces (increasing with each row)
@@ -142,10 +147,70 @@ int pattern8 (int n) {
         // Move to the next line after each row
         cout << endl;
     }
-}
 
 // *********
 //  *******
 //   *****
 //    ***
-//     *
+//     *    
+
+}
+
+void pattern9 (int n) {
+    // pattern 9 (combination of pattern 7 and 8)
+}
+
+// pattern 10
+void pattern10 (int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j=0; j<=i; j++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j=n-1; j>i; j--) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+// pattern 11
+void pattern11 (int n) {
+    int start = 1;
+   
+    for (int i = 0; i < n; i++) {
+        if (i%2 == 0) start = 1;
+        else start =0;
+        for (int j = 0; j<=i; j++) {
+            cout<< start;
+            start = 1-start;
+        }
+
+        cout << endl;
+    }
+}
+
+// pattern 12
+void pattern12 (int n) {
+}
+
+// pattern 13
+void pattern13 (int n) {}
+
+// pattern 14
+void pattern14 (int n) {}
+
+// pattern 15
+void pattern15 (int n) {}
+
+int main() {
+    int t;
+    cin >> t;
+    for (int i = 0; i < t; i++) {
+        int n;
+        cin >> n;
+        pattern8(n);
+    }
+}
