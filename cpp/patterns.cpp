@@ -194,6 +194,25 @@ void pattern11 (int n) {
 
 // pattern 12
 void pattern12 (int n) {
+    for (int i = 0; i < n; i++) {  // n is 3
+        int count = n;
+        // numbers (1, 2, 3)             
+        for (int j = 1; j < i+2; j++) {
+            cout << j << " ";
+        }
+
+        // whitespace (8, 4, 0)  
+        for (int j = 0; j < (2*(n-i)-2)*2; j++) {
+            cout << " "; 
+        } 
+
+        // numbers (1, 2, 3) 
+        for (int j = i+1; j > 0; j--) {
+            cout << j << " ";
+        }
+         
+        cout << endl;
+    }
 }
 
 // pattern 13
