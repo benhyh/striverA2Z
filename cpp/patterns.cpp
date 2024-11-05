@@ -195,7 +195,6 @@ void pattern11 (int n) {
 // pattern 12
 void pattern12 (int n) {
     for (int i = 0; i < n; i++) {  // n is 3
-        int count = n;
         // numbers (1, 2, 3)             
         for (int j = 1; j < i+2; j++) {
             cout << j << " ";
@@ -210,13 +209,23 @@ void pattern12 (int n) {
         for (int j = i+1; j > 0; j--) {
             cout << j << " ";
         }
-         
+
         cout << endl;
     }
 }
 
 // pattern 13
-void pattern13 (int n) {}
+void pattern13 (int n) {
+    for (int i = 0; i < n; i++) {
+        int start = i*(i+1)/2 + 1;
+        // 0*(0+1)/2 + 1 = 1
+        for (int j = 0; j <= i; j++) {
+            cout << start << " ";
+            start++;
+        }
+        cout << endl;
+    }
+}
 
 // pattern 14
 void pattern14 (int n) {}
