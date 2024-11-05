@@ -7,7 +7,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// pattern 1
 void pattern1(int n) {
         for (int i = 0; i<n; ++i) {
         for (int j = 0; j<n; ++j) {
@@ -16,8 +15,6 @@ void pattern1(int n) {
         cout << endl;
     }
 }
-
-// pattern 2
 void pattern2 (int n) {
     for (int i= 0; i<n; ++i) {
         for (int j=0; j<=i; ++j) {
@@ -26,8 +23,6 @@ void pattern2 (int n) {
         cout << endl;
     }
 }
-
-// pattern3
 void pattern3 (int n) {
     for (int i=1; i<n; ++i) {
         for(int j=1; j<=i; ++j) {
@@ -36,8 +31,6 @@ void pattern3 (int n) {
         cout << endl;
     }
 }
-
-// pattern 4
 void pattern4 (int n) {
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <=i; ++j) {
@@ -57,8 +50,6 @@ void pattern4 (int n) {
 // print i (print the current iteration value)
 
 }
-
-// pattern 5
 void pattern5(int n) {
     for (int i = 0; i<n; ++i) {
         for (int j = n; j>i; --j) {
@@ -79,8 +70,6 @@ void pattern5(int n) {
 // print "*"
 
 }
-
-// pattern 6
 void pattern6(int n) {
     for (int i = 0; i<n; ++i) {
         for (int j = n; j > i; --j) {
@@ -95,8 +84,6 @@ void pattern6(int n) {
 // n-j+1 => tells us the value to print. how? n-j returns the entire range of values and each time j decrements by 1, we get the next value in the range
 
 }
-
-// pattern 7
 void pattern7(int n) {
     for (int i = 0; i<n; ++i) {
         // space
@@ -129,8 +116,6 @@ void pattern7(int n) {
 // third row contain no space (3-3)
 
 }
-
-// pattern 8
 void pattern8 (int n) {
     for (int i = 0; i < n; ++i) {
         
@@ -155,12 +140,9 @@ void pattern8 (int n) {
 //     *    
 
 }
-
 void pattern9 (int n) {
     // pattern 9 (combination of pattern 7 and 8)
 }
-
-// pattern 10
 void pattern10 (int n) {
     for (int i = 0; i < n; i++) {
         for (int j=0; j<=i; j++) {
@@ -175,8 +157,6 @@ void pattern10 (int n) {
         cout << endl;
     }
 }
-
-// pattern 11
 void pattern11 (int n) {
     int start = 1;
    
@@ -191,8 +171,6 @@ void pattern11 (int n) {
         cout << endl;
     }
 }
-
-// pattern 12
 void pattern12 (int n) {
     for (int i = 0; i < n; i++) {  // n is 3
         // numbers (1, 2, 3)             
@@ -213,24 +191,24 @@ void pattern12 (int n) {
         cout << endl;
     }
 }
-
-// pattern 13
 void pattern13 (int n) {
-    for (int i = 0; i < n; i++) {
-        int start = i*(i+1)/2 + 1;
-        // 0*(0+1)/2 + 1 = 1
-        for (int j = 0; j <= i; j++) {
-            cout << start << " ";
-            start++;
+    int num = 1;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j<=i; j++)  {
+            cout << num << " ";
+            num = num + 1;
+        }
+    }
+}
+void pattern14 (int n) {
+    for (int i = 1; i <= n; i++) {
+        char c = 'A';
+        for (int j = c; j < c+i; j++) {
+            cout << char(j) << " ";
         }
         cout << endl;
     }
 }
-
-// pattern 14
-void pattern14 (int n) {}
-
-// pattern 15
 void pattern15 (int n) {}
 
 int main() {
