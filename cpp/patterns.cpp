@@ -217,17 +217,29 @@ void pattern15 (int n) {
             cout << char(j) << " "; 
         }
 
+        // 65 <= 67 (1st iteration): 65 66 67 
+        // 65 <= 66 (2nd iteration): 65 66
+        // 65 <= 65 (3rd iteration): 65
+
         cout << endl;
     }
 }
-void pattern16 (int n) {}
+void pattern16 (int n) {
+    char c = 'A';
+    for (int i = c; i <c+n; i++) {
+        for (int j = c-1; j <i; j++) {
+            cout << char(i) << " ";
+        }
+
+        cout << endl;
+    }
+}
 void pattern17 (int n) {}
 void pattern18 (int n) {}
 void pattern19 (int n) {}
 void pattern20 (int n) {}
 void pattern21 (int n) {}
 void pattern22 (int n) {}
-void pattern23 (int n) {}
 
 int main() {
     int t;
