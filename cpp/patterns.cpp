@@ -202,14 +202,32 @@ void pattern13 (int n) {
 }
 void pattern14 (int n) {
     for (int i = 1; i <= n; i++) {
-        char c = 'A';
-        for (int j = c; j < c+i; j++) {
-            cout << char(j) << " ";
+        char c = 'A'; // stores as an 8 bit integer (ASCII value)
+        for (int j = c; j < c+i; j++) { // 65 (ASCII value of 'A') or int j = 65; j < 65+i; j++
+            cout << char(j) << " "; // convert ASCII value to character 
         }
         cout << endl;
     }
 }
-void pattern15 (int n) {}
+void pattern15 (int n) {  
+    for (int i = 1; i <= n; i++) {
+        char c = 'A'; // 65      
+
+        for (int j = c; j <= (c+n)-i; j++) {
+            cout << char(j) << " "; 
+        }
+
+        cout << endl;
+    }
+}
+void pattern16 (int n) {}
+void pattern17 (int n) {}
+void pattern18 (int n) {}
+void pattern19 (int n) {}
+void pattern20 (int n) {}
+void pattern21 (int n) {}
+void pattern22 (int n) {}
+void pattern23 (int n) {}
 
 int main() {
     int t;
