@@ -5,41 +5,67 @@
 
 import java.util.Scanner;
 
-public class PasswordReset {
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		String password;
-		String passwordConfirm;
-		final int MAX_TRIES = 5;
-		
-		System.out.println("Welcome to the password reset service!");		
-		System.out.println("Enter your new password: ");
-        password = input.next();
-        System.out.println("Enter your new password again: ");
-        passwordConfirm = input.next();
-        
-        if (!password.equals(passwordConfirm)) {
-            System.out.print("Sorry! Those passwords don't match. Try again: ");
-            passwordConfirm = input.next();
-        }
-        if (password.equals(passwordConfirm)) {
-            System.out.println("Password confirmed. Logging out...\n");
-            for (int i = MAX_TRIES; i > 0; i--) {
-                System.out.print("Enter your password: ");
-                password = input.next();
-                if (password.equals(passwordConfirm)) {
-                    System.out.println("Welcome! You are now logged in.");
-                    i = 0; //What does this line do? Make sure you understand
-                } else {
-                    System.out.print("Invalid password.");
-                    System.out.print("You have " + (i - 1) + " tries left.\n");
-                }
+public class NestedLoops {
+   public static void main (String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int numRows;
+      int numColumns;
+      int currentRow;
+      char currentRowLetter;
+      int currentColumn;
+      int currentColumnInteger;
+   
+      numRows = scnr.nextInt();
+      numColumns = scnr.nextInt();
+
+      /* Your code goes here */
+      for (currentColumn = 1; currentColumn <= numColumns; currentColumn++) {
+        for (currentRow = 1; currentRow <= numColumns; currentRow++) {
+            System.out.print("" + currentRowLetter + currentColumnInteger + " ");
+            currentColumnInteger++;
+            if (currentColumnInteger == numColumns) {
+                currentColumnInteger = 1;
             }
-        } else {
-            System.out.println("Sorry! Those passwords don't match.");
-        	System.out.println("Goodbye!");
         }
-       
-        input.close();
+        currentRowLetter++;
+        System.out.println();
+      }       
+
    }
 }
+
+public class Statistics {
+    public static void main(String args[]) {
+        Scanner scnr = new Scanner(System.in);
+        int userInput;
+        int sum; 
+
+        do {
+            userInput = scnr.nextInt();
+
+            if (userInput == 0) break;
+                
+
+        } while (userInput.hasNextInt());
+
+        System.out.println("" + max + average);
+
+        scnr.close();
+    }
+}
+
+public class Triangle {
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+        int userInput = scnr.nextInt();
+
+        for (int i = 1; i <= userInput; i++) {
+            for (int j = userInput; j>=i; j--) {
+                System.out.println("* ");
+            }
+            System.out.println();
+        }
+
+        scnr.close();
+    }
+} 

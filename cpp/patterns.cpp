@@ -90,7 +90,7 @@ void pattern7(int n) {
         for (int j = 0; j<n-i+1; ++j) {
             cout << " ";
         }
-
+        
         // star
         for (int j = 0; j < 2*i+1; ++j) {
             cout << "*";
@@ -210,9 +210,8 @@ void pattern14 (int n) {
     }
 }
 void pattern15 (int n) {  
+    char c = 'A'; // 65      
     for (int i = 1; i <= n; i++) {
-        char c = 'A'; // 65      
-
         for (int j = c; j <= (c+n)-i; j++) {
             cout << char(j) << " "; 
         }
@@ -234,7 +233,32 @@ void pattern16 (int n) {
         cout << endl;
     }
 }
-void pattern17 (int n) {}
+void pattern17 (int n) {
+    for (int i = 0; i < n; i++) {        
+        
+        // spaces
+        for (int j = 0; j < (n-i-1)*2; j++) {
+          cout << " ";
+        }
+
+        // alphabets
+
+        char c = 'A';
+        int breakpoint = (2*i+1) / 2;
+        for (int j = 1; j <= 2*i+1; j++) {
+            cout << c << " ";
+            if(j <= breakpoint) c++;
+            else c--;
+        }
+
+        // spaces
+        for (int j = 0; j < (n-i-1)*2; j++) {
+          cout << " ";
+        } 
+        cout << endl;
+    }
+}
+
 void pattern18 (int n) {}
 void pattern19 (int n) {}
 void pattern20 (int n) {}
