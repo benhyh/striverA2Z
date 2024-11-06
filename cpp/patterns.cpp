@@ -5,6 +5,7 @@
 // 4. observer symmetry in the pattern (option)
 
 #include<bits/stdc++.h>
+
 using namespace std;
 
 void pattern1(int n) {
@@ -242,7 +243,6 @@ void pattern17 (int n) {
         }
 
         // alphabets
-
         char c = 'A';
         int breakpoint = (2*i+1) / 2;
         for (int j = 1; j <= 2*i+1; j++) {
@@ -258,9 +258,21 @@ void pattern17 (int n) {
         cout << endl;
     }
 }
+void pattern18 (int n) {
+    char c = 'A';
+    for (int i = 0; i < n; i++) {
+        for (int j = c+n-1; j >= (c+n-1)-i; j--) {
+            cout <<  char(j) << " ";
+        }
+        cout << endl;
+    }   
+}
+void pattern19 (int n) {
+    for (int i = 0; i < n; i++) {
 
-void pattern18 (int n) {}
-void pattern19 (int n) {}
+        cout << endl;
+    }
+}
 void pattern20 (int n) {}
 void pattern21 (int n) {}
 void pattern22 (int n) {}
