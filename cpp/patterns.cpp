@@ -351,18 +351,17 @@ void pattern21 (int n) {
     cout << endl;
     }
 }
-void pattern22 (int n) {
+
+void pattern22(int n) {
     for (int i = 0; i < n+(n-1); i++) {
-        int outerCount = 0;
-        int innerCount = n+(n-1)-1;
         for (int j = 0; j < n+(n-1); j++) {
-          if (i == outerCount || j == outerCount || i == innerCount || j == innerCount) {
-            cout << n;
-          } else {
-            cout << "-";
-          }
+            int top = i;
+            int left = j;
+            int right = (2*n - 2) - j;
+            int bottom = (2*n - 2) - i;
+            cout << (n - min(min(top, bottom), min(left, right)));
         }
-        cout << endl;   
+        cout << endl;
     }
 }
 
