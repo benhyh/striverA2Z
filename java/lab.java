@@ -167,3 +167,95 @@ public class CountCharacters {
         scnr.close();
     }
 }
+
+public class PlanetHero {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      
+      String choice;
+      int points = 0;
+
+      boolean main = true;
+      boolean big = false;
+      boolean medium = false;
+      boolean small = false;
+
+      System.out.println("Welcome to Planet Hero!\n");
+
+      do {     
+        System.out.println("Choose a category to make an impact:\n");
+        System.out.println("1. Big Impact Actions");
+        System.out.println("2. Medium Impact Actions");
+        System.out.println("3. Small Impact Actions");
+        System.out.println("Q. Quit and Get Total Points");
+        System.out.print("\nEnter your choice: ");
+        choice = scnr.nextLine().toUpperCase();
+
+        if(choice.equals("Q")) {
+            main = false;
+          System.out.println("Total points: " + points);
+        } else if (choice.equals("1")) {
+          big = true;
+        } else if (choice.equals("2")) {
+          medium = true;
+        } else if (choice.equals("3")) {
+          small = true;
+        } else {
+            System.out.println("Invalid choice. Please try again.\n");
+        }
+            
+        do {
+            System.out.println("Which BIG IMPACT action(s) will you pledge to take?\n");
+
+            scnr.nextLine().toUpperCase();
+
+            System.out.println("1. Pledge to stop flying (100 pts)");
+            System.out.println("2. Join a climate action group (100 pts)");
+            System.out.println("3. Adopt a 100% plant-based diet (100 pts)");
+            System.out.println("4. Replace your furnace with a heat pump (80 pts)");
+            System.out.println("R. Return to main menu");
+
+
+            if (choice.equals("R")) {
+                System.out.println("\nReturning to main menu...\n");
+                big = false;
+            } else if (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4")) {
+                if (choice.equals("1") || choice.equals("2") || choice.equals("3")) {
+                    points += 100;
+                } else if (choice.equals("4")) {
+                    points += 80;
+                }
+            }
+
+        } (while big);
+        
+        do {
+            System.out.println("Which MEDIUM IMPACT action(s) will you pledge to take?\n");
+            
+            System.out.println("1. Attend a climate rally (35 pts)");
+            System.out.println("2. Replace your lawn with a pollinator garden (40 pts)");
+            System.out.println("3. Check if your bank invests in dirty energy companies (40 pts)");
+            System.out.println("4. Buy only used clothes (50 pts)");
+            System.out.println("R. Return to main menu");
+            
+        } (while medium);
+        
+        do {
+            System.out.println("Which SMALL IMPACT action(s) will you pledge to take?\n");
+
+            System.out.println("1. Wash your clothes on the cold cycle and air dry them (30 pts)");
+            System.out.println("2. Bring a resuable mug to the coffee shop (10 pts)");
+            System.out.println("3. Compost your food waste (20 pts)");
+            System.out.println("4. Turn off the shower when soaping up (5 pts)");
+            System.out.println("R. Return to main menu");
+
+        } (while small);
+
+      } while (main);
+
+
+
+      scnr.close();
+   } (while main)
+}
+
