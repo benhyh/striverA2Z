@@ -90,7 +90,7 @@ public class StringRepeat {
         System.out.println("Printing \"" + statement + "\" with all words capitalized.");
         System.out.print("#7: ");
         
-        String result = statement.substring(0, 1).toUpperCase() + statement.substring(1);
+        String result = statement.substring(0, 1).toUpperCase() + statement.substring(1, statement.length());
         
         // Find spaces and capitalize next character
         for (int i = 0; i < result.length(); i++) {
