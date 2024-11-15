@@ -32,32 +32,43 @@ int reverse(int x) {
 
 // LC palindrome
 bool isPalindrome(int x) {
-    string converted = std::to_string(x);
-    string compare = std::to_string(x);
-
-    int l = 0;
-    int r = converted.length() - 1;
-
-    while (l < r) {
-        swap(converted[l], converted[r]);
-            
-        l++;
-
-        r--;
-    }
-
-    return (compare == converted);
-}
-
-bool isPaplindromeInt(int x) {
     int dupe = x;
-    int reversedValue = 0;
+    int rv = 0;
 
     while (0 < dupe) { 
-        int digit = dupe % 10;
+        int ld = dupe % 10;
         dupe /= 10;
-        reversedValue = reversedValue * 10 + digit;
+        rv = rv * 10 + ld;
     }
 
-    return (x == reversedValue);
+    return (x == rv)
+}
+
+bool checkArmstrong(int n){
+	int dupe = n;
+    int rv;
+    int digits = to_string(n).length();
+    int armstrong = 0;
+
+    while (dupe != 0) {
+        int ld = dupe % 10; 
+        dupe /= 10;
+        rv = 0 * 10 + ld;
+        armstrong = armstrong + pow(rv, digits);
+    }
+    
+    /*
+    * 1. 594 / 10 = 4;
+    * 2. 594 = 59;
+    * 3. 0 * 10 + 4;
+    * 4. rv = 4;
+    */
+
+   /*
+   * 1. 59 / 10 = 9;
+   * 2. 59 = 5;
+   * 3. 4 * 10 + 9 = 49
+   */
+
+    return (n == armstrong);
 }
