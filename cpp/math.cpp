@@ -45,7 +45,7 @@ bool isPalindrome(int x) {
 }
 
 bool checkArmstrong(int n){
-	int dupe = n;
+	int dupe = n; 
     int rv;
     int digits = to_string(n).length();
     int armstrong = 0;
@@ -57,18 +57,30 @@ bool checkArmstrong(int n){
         armstrong = armstrong + pow(rv, digits);
     }
     
-    /*
-    * 1. 594 / 10 = 4;
-    * 2. 594 = 59;
-    * 3. 0 * 10 + 4;
-    * 4. rv = 4;
-    */
-
-   /*
-   * 1. 59 / 10 = 9;
-   * 2. 59 = 5;
-   * 3. 4 * 10 + 9 = 49
-   */
-
     return (n == armstrong);
+}
+
+int sumOfAllDivisors(int n) {
+    int sum = 0;
+    
+    // Loop through numbers from 1 to n
+    for (int i = 1; i <= n; i++) {
+        // Find all divisors of i and add them
+        int divisorSum = 0;
+        
+        // Check all possible divisors from 1 to sqrt(i)
+        for (int j = 1; j * j <= i; j++) {
+            if (i % j == 0) {
+                divisorSum += j;  // Add the smaller divisor
+                
+                // If j is not the square root, add the corresponding larger divisor
+                if (j * j != i) {
+                    divisorSum += (i / j);
+                }
+            }
+        }
+        sum += divisorSum;
+    }
+    
+    return sum;
 }
