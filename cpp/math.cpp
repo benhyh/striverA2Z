@@ -63,17 +63,13 @@ bool checkArmstrong(int n){
 int sumOfAllDivisors(int n) {
     int sum = 0;
     
-    // Loop through numbers from 1 to n
     for (int i = 1; i <= n; i++) {
-        // Find all divisors of i and add them
         int divisorSum = 0;
         
-        // Check all possible divisors from 1 to sqrt(i)
         for (int j = 1; j * j <= i; j++) {
             if (i % j == 0) {
-                divisorSum += j;  // Add the smaller divisor
+                divisorSum += j;  
                 
-                // If j is not the square root, add the corresponding larger divisor
                 if (j * j != i) {
                     divisorSum += (i / j);
                 }
