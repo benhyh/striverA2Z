@@ -28,7 +28,6 @@ public class ReadingList {
             System.out.println("Enter book #" + (i + 1) + ": ");
             bookArray[i] = input.nextLine();
 
-
             char firstChar = bookArray[i].toUpperCase().charAt(0);
             if (firstChar >= 'A' && firstChar <= 'M') {
                 bookTitlesAM++;
