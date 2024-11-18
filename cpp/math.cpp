@@ -93,3 +93,4 @@ bool isPrime(int n) {
     if (cnt == 2) return true;
     else return false;
 }
+ 
