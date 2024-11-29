@@ -37,4 +37,11 @@ void reverseArray3(int arr[], int start, int end) {
         swap(arr[start], arr[end]);
         reverseArray3(arr, start + 1, end - 1);
     }
-}s
+}
+
+bool isPalindrome(string s) {
+    // init new string
+    for (int i = s.length() - 1; i >= 0; i--) {
+        cout << s[i] << endl;
+    }
+}
