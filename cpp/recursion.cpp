@@ -45,3 +45,13 @@ bool isPalindrome(string s) {
         cout << s[i] << endl;
     }
 }
+
+/**
+ * purpose: check if a string is a palindrome or not
+ * @param n 
+ */
+
+void palindrome(int n) {
+
+    
+}
