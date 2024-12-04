@@ -75,7 +75,7 @@ class Solution {
             int min = i;
             
             for (int j = i; j < len; j++) {
-                if (arr[j] < arr[i]) min = j;
+                if (arr[j] < arr[min]) min = j;
             }
             
             int temp = arr[min];
@@ -84,4 +84,15 @@ class Solution {
         }
     }
 
+    void bubbleSort(std::vector<int>& arr) {
+        int len = arr.size();
+
+        for (int i = 0; i < len - 1; i++) {  // Iterate len-1 times
+            for (int j = 0; j < len - i - 1; j++) {  // Traverse unsorted part
+                if (arr[j] > arr[j + 1]) {  // Compare adjacent elements
+                    std::swap(arr[j], arr[j + 1]);  // Swap if out of order
+                }
+            }
+        }
+    }
 };
