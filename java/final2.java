@@ -46,7 +46,7 @@ public class Handles {
     /**
      * Purpose: Convert handle to URL
      * @param array of Strings
-     * @return array of Strings containing the URLs for each accountq
+     * @return array of Strings containing the URLs for each account
      */
 
     public static String[] convertHandleToURL (String[] handlesArray) {
@@ -63,7 +63,6 @@ public class Handles {
 
         return urlArray;
     }
-
 
     /**
      * Purpose to print first and last name followed by the @ handles

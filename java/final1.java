@@ -7,7 +7,7 @@ import java.util.Scaner;
 import java.io.*;
 
 public class TeleMarket {
-    public class void main(String[] args) {
+    public class void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the name of a file: ");
@@ -22,6 +22,7 @@ public class TeleMarket {
 
         System.out.println("Open script.txt for auto-generated call script")
         
+        inputScanner.close();
         scanner.close();
     }
 
@@ -38,7 +39,7 @@ public class TeleMarket {
 
         for (int i = 0; i < size; i++) {
             String fullName = scanner.nextLine();
-            char gender = scanner.nextLine().charAt.(0);
+            char gender = scanner.nextLine().charAt(0);
                 
             String prefix = "";
 
@@ -69,7 +70,7 @@ public class TeleMarket {
      * @return nothing
      */
 
-    public static void writeScript(String[] customerArray) {
+    public static void writeScript(String[] customerArray) throws IOException {
         File script = new File("script.txt");
         PrintWriter writer = new PrintWriter(script);
 
@@ -80,5 +81,7 @@ public class TeleMarket {
             out.println("Do you have a few minutes?");
             out.println("I want to let you know about an exciting offer on widgits.\n");
         }
+
+        writer.close();
     }
-}
+}   
